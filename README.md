@@ -1,2 +1,2 @@
 # Personal-Website
-Personal website for job profile
+Personal portfolio website to display my talents and achievements 
