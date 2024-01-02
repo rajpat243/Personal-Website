@@ -202,6 +202,13 @@ body {
 	width: 100%;
 }
 
+.itemsContainer img {
+	float: left;
+    width:  100px;
+    height: 175px;
+    object-fit: cover;
+}
+
 
 .items li img {
 	width: 100%;
