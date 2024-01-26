@@ -27,7 +27,7 @@ $(document).ready(function() {
 	});
 
 	var typed = new Typed(".typed", {
-		strings: ["Software Engineering", "Computer Science", "Machine Learning"],
+		strings: ["Software Engineering", "Computer Science", "Machine Learning", "Web Development"],
 		typeSpeed: 70,
 		loop: true,
 		startDelay: 1000,
