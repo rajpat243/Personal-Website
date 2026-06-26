@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ── Design tokens ──────────────────────────────────────────────────────────
+   Carried forward from the original site's visual identity:
+   primary cyan #06a5c5 and the blue→cyan signature gradient. */
+@theme {
+  --color-brand: #06a5c5;
+  --color-brand-light: #0091ff;
+  --color-brand-dark: #057f97;
+  --color-ink: #1f2933;
+  --color-ink-soft: #52606d;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Signature gradient reused across hero, nav accents, and section bands. */
+.brand-gradient {
+  background-image: linear-gradient(135deg, var(--color-brand-light), var(--color-brand));
+}
+
+.brand-text-gradient {
+  background-image: linear-gradient(135deg, var(--color-brand-light), var(--color-brand));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Blinking caret for the hero typewriter effect. */
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.type-caret {
+  animation: caret-blink 1s step-end infinite;
+  font-weight: 400;
+}
+
+/* Respect users who ask for less motion: neutralize animation + smooth scroll. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
