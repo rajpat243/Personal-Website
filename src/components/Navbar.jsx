@@ -52,7 +52,7 @@ export default function Navbar() {
       >
           <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-lg shadow">
-              <img src="dist/favicon.png" alt="Logo" className="h-8 w-8 object-contain" />
+              <img src="/dist/favicon.png" alt="Logo" className="h-8 w-8 object-contain" />
             </span>
             <span className="hidden sm:inline">Raj Patel</span>
           </Link>
