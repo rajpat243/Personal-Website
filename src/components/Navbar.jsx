@@ -50,12 +50,12 @@ export default function Navbar() {
           scrolled ? 'h-14' : 'h-20',
         ].join(' ')}
       >
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg brand-gradient text-sm text-white shadow">
-            RP
-          </span>
-          <span className="hidden sm:inline">Raj Patel</span>
-        </Link>
+          <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
+            <span className="grid h-8 w-8 place-items-center rounded-lg shadow">
+              <img src="public/favicon.ico" alt="Logo" className="h-8 w-8 object-contain" />
+            </span>
+            <span className="hidden sm:inline">Raj Patel</span>
+          </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-8 md:flex">
