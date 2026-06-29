@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import PageTransition from '../components/PageTransition.jsx'
-import PageHeader from '../components/PageHeader.jsx'
 import Reveal from '../components/Reveal.jsx'
 import {
   GithubIcon,
@@ -22,7 +21,6 @@ export default function Contact() {
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }))
 
-  // No backend: compose a prefilled email via the user's mail client.
   const onSubmit = (e) => {
     e.preventDefault()
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name || 'a visitor'}`)
@@ -32,25 +30,35 @@ export default function Contact() {
     window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`
   }
 
-  const field =
-    'w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20'
+  const fieldClass =
+    'w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/30 transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20'
 
   return (
     <PageTransition
       title="Contact — Raj Patel"
       description="Get in touch with Raj Patel, or download a copy of the resume."
     >
-      <PageHeader
-        eyebrow="Contact"
-        title="Let's connect"
-        subtitle="I'd love to hear from you — whether it's an opportunity, a question, or just to say hi."
-      />
+      {/* ── Header ──────────────────────────────────────────────────────── */}
+      <section className="relative z-10 overflow-hidden bg-[#07080A]">
+        <div aria-hidden="true" className="pointer-events-none absolute -top-32 -left-20 h-72 w-72 rounded-full bg-brand/10 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -right-20 h-72 w-72 rounded-full bg-[#38bdf8]/8 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-5 py-20 sm:py-24">
+          <p className="mb-3 font-mono text-[12px] uppercase tracking-[0.16em] text-brand">// Let&apos;s talk</p>
+          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-[#F4F6F8] sm:text-5xl">
+            Let&apos;s build something<br />that scales.
+          </h1>
+          <p className="mt-5 max-w-xl text-[17px] leading-[1.65] text-[#C3C9D4]">
+            Open to opportunities in data &amp; software engineering. The fastest way to reach me is below.
+          </p>
+        </div>
+      </section>
 
-      <section className="py-16 sm:py-20">
+      {/* ── Content ─────────────────────────────────────────────────────── */}
+      <section className="relative z-10 py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
           {/* Channels + resume */}
           <Reveal>
-            <h2 className="font-display text-2xl font-bold">Reach me directly</h2>
+            <h2 className="font-display text-2xl font-bold text-white">Reach me directly</h2>
             <ul className="mt-6 space-y-3">
               {channels.map(({ label, value, href, Icon }) => (
                 <li key={label}>
@@ -58,16 +66,16 @@ export default function Contact() {
                     href={href}
                     target={href.startsWith('mailto:') ? undefined : '_blank'}
                     rel="noreferrer"
-                    className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"
+                    className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[.022] p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
                   >
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg brand-gradient text-white">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand text-[#07080A]">
                       <Icon className="h-5 w-5" />
                     </span>
                     <span>
-                      <span className="block text-sm font-semibold">{label}</span>
-                      <span className="block text-sm text-ink-soft">{value}</span>
+                      <span className="block text-sm font-semibold text-white">{label}</span>
+                      <span className="block text-sm text-[#C3C9D4]">{value}</span>
                     </span>
-                    <ArrowRightIcon className="ml-auto h-4 w-4 text-slate-300 transition-colors group-hover:text-brand" />
+                    <ArrowRightIcon className="ml-auto h-4 w-4 text-white/20 transition-colors group-hover:text-brand" />
                   </a>
                 </li>
               ))}
@@ -77,7 +85,7 @@ export default function Contact() {
               href={contact.resume}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition-transform hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 rounded-[11px] bg-brand px-6 py-3 text-sm font-semibold text-[#07080A] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
             >
               <DownloadIcon className="h-4 w-4" />
               Download Resume
@@ -88,37 +96,37 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <form
               onSubmit={onSubmit}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+              className="rounded-2xl border border-white/10 bg-white/[.022] p-6 sm:p-8"
             >
-              <h2 className="font-display text-2xl font-bold">Send a message</h2>
-              <p className="mt-2 text-sm text-ink-soft">
+              <h2 className="font-display text-2xl font-bold text-white">Send a message</h2>
+              <p className="mt-2 text-sm text-[#C3C9D4]">
                 This opens your email client with the message prefilled.
               </p>
 
               <div className="mt-6 space-y-4">
                 <div>
-                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-white/70">
                     Name
                   </label>
-                  <input id="name" type="text" required value={form.name} onChange={update('name')} className={field} placeholder="Your name" />
+                  <input id="name" type="text" required value={form.name} onChange={update('name')} className={fieldClass} placeholder="Your name" />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium">
+                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-white/70">
                     Email
                   </label>
-                  <input id="email" type="email" value={form.email} onChange={update('email')} className={field} placeholder="you@example.com" />
+                  <input id="email" type="email" value={form.email} onChange={update('email')} className={fieldClass} placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
+                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-white/70">
                     Message
                   </label>
-                  <textarea id="message" required rows={5} value={form.message} onChange={update('message')} className={`${field} resize-y`} placeholder="What's on your mind?" />
+                  <textarea id="message" required rows={5} value={form.message} onChange={update('message')} className={`${fieldClass} resize-y`} placeholder="What's on your mind?" />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition-transform hover:-translate-y-0.5"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[11px] bg-brand px-6 py-3 text-sm font-semibold text-[#07080A] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
               >
                 Send message
                 <ArrowRightIcon className="h-4 w-4" />

@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 export default function PageHeader({ eyebrow, title, subtitle }) {
   const reduce = useReducedMotion()
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-white">
+    <section className="relative overflow-hidden bg-[#07080A] text-white">
       {/* Glow blobs echoing the home hero background. */}
       <motion.div
         aria-hidden="true"
@@ -27,10 +27,10 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           {eyebrow && (
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-brand">{eyebrow}</p>
+            <p className="mb-3 font-mono text-[12px] font-medium uppercase tracking-[0.2em] text-brand">{eyebrow}</p>
           )}
-          <h1 className="font-display text-4xl font-bold sm:text-5xl">{title}</h1>
-          {subtitle && <p className="mt-4 max-w-2xl text-lg text-slate-300">{subtitle}</p>}
+          <h1 className="font-display text-4xl font-bold tracking-tight text-[#F4F6F8] sm:text-5xl">{title}</h1>
+          {subtitle && <p className="mt-4 max-w-2xl text-lg text-[#9AA1AD]">{subtitle}</p>}
         </motion.div>
       </div>
     </section>

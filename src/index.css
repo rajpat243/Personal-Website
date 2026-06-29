@@ -1,17 +1,15 @@
 @import "tailwindcss";
 
-/* ── Design tokens ──────────────────────────────────────────────────────────
-   Carried forward from the original site's visual identity:
-   primary cyan #06a5c5 and the blue→cyan signature gradient. */
 @theme {
-  --color-brand: #06a5c5;
-  --color-brand-light: #0091ff;
-  --color-brand-dark: #057f97;
-  --color-ink: #1f2933;
-  --color-ink-soft: #52606d;
+  --color-brand: #51E4FF;
+  --color-brand-light: #80edff;
+  --color-brand-dark: #0ba8c8;
+  --color-ink: #ECEEF1;
+  --color-ink-soft: #9AA1AD;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Bricolage Grotesque", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 html {
@@ -21,45 +19,53 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-ink);
-  background-color: #ffffff;
+  background-color: #07080A;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Signature gradient reused across hero, nav accents, and section bands. */
+body::-webkit-scrollbar { width: 8px; }
+body::-webkit-scrollbar-track { background: #07080A; }
+body::-webkit-scrollbar-thumb { background: #22262c; border-radius: 6px; }
+
 .brand-gradient {
-  background-image: linear-gradient(135deg, var(--color-brand-light), var(--color-brand));
+  background-image: linear-gradient(135deg, #38bdf8, var(--color-brand));
 }
 
 .brand-text-gradient {
-  background-image: linear-gradient(135deg, var(--color-brand-light), var(--color-brand));
+  background-image: linear-gradient(135deg, #38bdf8, var(--color-brand));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Blinking caret for the hero typewriter effect. */
 @keyframes caret-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 .type-caret {
   animation: caret-blink 1s step-end infinite;
   font-weight: 400;
 }
 
-/* Respect users who ask for less motion: neutralize animation + smooth scroll. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(81, 228, 255, 0.55); }
+  50% { box-shadow: 0 0 0 7px rgba(81, 228, 255, 0); }
+}
+.pulse-glow {
+  animation: pulse-glow 2.4s ease-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;

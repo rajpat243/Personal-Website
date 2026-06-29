@@ -17,35 +17,35 @@ export default function Experience() {
       />
 
       {/* ── Timeline ─────────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20">
+      <section className="relative z-10 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-5">
-          <ol className="relative border-l-2 border-slate-200">
+          <ol className="relative border-l-2 border-white/10">
             {experience.map((job, i) => (
               <Reveal key={job.company} delay={i * 0.08} as="li" className="relative mb-12 ml-6 last:mb-0">
                 <span
                   className={[
-                    'absolute -left-[31px] mt-1.5 grid h-5 w-5 place-items-center rounded-full ring-4 ring-white',
-                    job.current ? 'brand-gradient' : 'bg-slate-300',
+                    'absolute -left-[31px] mt-1.5 grid h-5 w-5 place-items-center rounded-full ring-4 ring-[#07080A]',
+                    job.current ? 'bg-brand' : 'bg-white/20',
                   ].join(' ')}
                 >
-                  {job.current && <span className="h-2 w-2 rounded-full bg-white" />}
+                  {job.current && <span className="h-2 w-2 rounded-full bg-[#07080A]" />}
                 </span>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="rounded-2xl border border-white/10 bg-white/[.022] p-6">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
-                      <h3 className="font-display text-lg font-bold">{job.role}</h3>
-                      <p className="font-medium text-brand-dark">{job.company}</p>
+                      <h3 className="font-display text-lg font-bold text-white">{job.role}</h3>
+                      <p className="font-medium text-brand">{job.company}</p>
                     </div>
-                    <div className="text-right text-sm text-ink-soft">
+                    <div className="text-right text-sm text-[#C3C9D4]">
                       <p className="font-medium">{job.period}</p>
                       <p>{job.location}</p>
                     </div>
                   </div>
                   <ul className="mt-4 space-y-2.5">
                     {job.points.map((pt, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full brand-gradient" />
+                      <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-[#C3C9D4]">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
                         {pt}
                       </li>
                     ))}
@@ -57,23 +57,23 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* ── Certifications badge grid ────────────────────────────────────── */}
-      <section className="bg-slate-50 py-16 sm:py-20">
+      {/* ── Certifications ───────────────────────────────────────────────── */}
+      <section className="relative z-10 border-t border-white/10 bg-white/[.012] py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="text-center">
-            <h2 className="font-display text-3xl font-bold sm:text-4xl">Certifications</h2>
-            <p className="mx-auto mt-3 max-w-xl text-ink-soft">AWS credentials, most recent first.</p>
+            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">Certifications</h2>
+            <p className="mx-auto mt-3 max-w-xl text-[#C3C9D4]">AWS credentials, most recent first.</p>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {certifications.map((cert, i) => (
               <Reveal key={cert.name} delay={i * 0.08}>
-                <div className="group flex h-full flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md">
-                  <div className="grid h-16 w-16 place-items-center rounded-xl bg-slate-900 text-[#FF9900] transition-transform group-hover:scale-105">
+                <div className="group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-white/[.022] p-6 text-center transition-colors hover:border-brand">
+                  <div className="grid h-16 w-16 place-items-center rounded-xl bg-[#0d0e11] text-[#FF9900] transition-transform group-hover:scale-105">
                     <AwsIcon className="h-9 w-9" />
                   </div>
-                  <h3 className="mt-4 font-display text-sm font-semibold leading-snug">{cert.name}</h3>
-                  <p className="mt-2 text-xs font-medium uppercase tracking-wide text-ink-soft">
+                  <h3 className="mt-4 font-display text-sm font-semibold leading-snug text-white">{cert.name}</h3>
+                  <p className="mt-2 font-mono text-[11px] uppercase tracking-wide text-[#C3C9D4]">
                     Issued {cert.issued}
                   </p>
                 </div>

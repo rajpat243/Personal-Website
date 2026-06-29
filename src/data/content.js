@@ -16,11 +16,11 @@ export const profile = {
     'Data Engineer building ETL/ELT pipelines and bringing AI into enterprise analytics.',
   // Rotating words shown in the home hero.
   roles: [
-    'Data Engineering',
-    'Software Development',
-    'Artificial Intelligence',
-    'Forward Deployed',
-    'Machine Learning',
+    'data pipelines',
+    'AI systems',
+    'ETL/ELT flows',
+    'data architecture',
+    'ML in production',
   ],
 }
 

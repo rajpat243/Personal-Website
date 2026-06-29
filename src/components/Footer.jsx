@@ -10,10 +10,10 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-white/10 bg-[#07080A]">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row">
         <div className="text-center sm:text-left">
-          <Link to="/" className="font-display text-base font-bold">
+          <Link to="/" className="font-display text-base font-bold text-white">
             {profile.name}
           </Link>
           <p className="text-sm text-ink-soft">{profile.headline}</p>
@@ -27,16 +27,16 @@ export default function Footer() {
               target={href.startsWith('mailto:') ? undefined : '_blank'}
               rel="noreferrer"
               aria-label={label}
-              className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-ink-soft transition-colors hover:border-brand hover:text-brand"
+              className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/50 transition-colors hover:border-brand hover:text-brand"
             >
               <Icon className="h-5 w-5" />
             </a>
           ))}
         </div>
       </div>
-      <div className="border-t border-slate-200 py-4">
-        <p className="text-center text-xs text-ink-soft">
-          © {2026} {profile.name}. Built with React, Vite &amp; Framer Motion.
+      <div className="border-t border-white/10 py-4">
+        <p className="text-center font-mono text-xs text-white/50">
+          © 2026 {profile.name} — Hartford, CT
         </p>
       </div>
     </footer>
