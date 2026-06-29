@@ -5,6 +5,8 @@ import uconnImg from '../assets/img/uconn.png'
 import planeImg from '../assets/img/plane.png'
 import clothesImg from '../assets/img/clothes.png'
 import owlImg from '../assets/img/Owl.png'
+import spotifyImg from '../assets/img/spotify.png'
+import aiAssistantImg from '../assets/img/ai_virtual_assistants.png'
 
 export const profile = {
   name: 'Raj Patel',
@@ -150,7 +152,7 @@ export const projects = [
   {
     title: 'AI-Powered Onboarding Assistant',
     context: 'Hackathon · Sept 2025',
-    image: null,
+    image: aiAssistantImg,
     points: [
       'Built an AI onboarding platform that uses prior employee data to recommend role-appropriate permissions and SailPoint identity groups, reducing manual provisioning overhead.',
       "Trained an AWS Bedrock Agent Core agent on synthetic employee and permissions data for natural-language Q&A, surfacing accurate access policies for new hires and team-switchers without IT escalation.",
@@ -170,6 +172,18 @@ export const projects = [
     ],
     tech: ['Python', 'TensorFlow', 'CNN', 'TensorFlow Lite', 'Coral Dev Board', 'ClusterDuck Protocol'],
     github: 'https://github.com/rajpat243/visual-shark-tracking',
+  },
+  {
+    title: 'Full-Stack Spotify Clone',
+    context: 'Aug 2024 – Jan 2025',
+    image: spotifyImg,
+    points: [
+      'Built a production-grade music streaming web app featuring audio playback, song uploads, and user authentication via Supabase Auth.',
+      'Implemented Stripe-powered premium subscriptions and designed a PostgreSQL schema via Supabase for relational data management.',
+      'Designed a Spotify-inspired responsive UI using Radix UI primitives (Dialog, Slider) and Tailwind CSS; managed global state with Zustand.',
+    ],
+    tech: ['Next.js 14', 'TypeScript', 'Supabase', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'Zustand', 'Radix UI'],
+    github: 'https://github.com/rajpat243/Spotify-Clone',
   },
   {
     title: 'The Clothes Exchange',
@@ -212,7 +226,7 @@ export const contact = {
 
 export const stats = [
   { value: 3, suffix: '+', label: 'Years Experience' },
-  { value: 5, suffix: '', label: 'Featured Projects' },
+  { value: 6, suffix: '', label: 'Featured Projects' },
   { value: 4, suffix: '', label: 'AWS Certifications' },
   { value: 8, suffix: '+', label: 'Languages & Tools' },
 ]
