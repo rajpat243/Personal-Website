@@ -27,14 +27,14 @@ export default function App() {
   }, [])
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+    <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-bg text-text">
       {/* Ambient dot grid */}
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 z-0"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px)',
+            `linear-gradient(var(--dot-grid) 1px, transparent 1px), linear-gradient(90deg, var(--dot-grid) 1px, transparent 1px)`,
           backgroundSize: '62px 62px',
           WebkitMaskImage: 'radial-gradient(circle at 50% 30%, #000, transparent 78%)',
           maskImage: 'radial-gradient(circle at 50% 30%, #000, transparent 78%)',
