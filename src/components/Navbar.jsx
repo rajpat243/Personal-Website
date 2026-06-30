@@ -77,16 +77,6 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
-          <li>
-            <a
-              href={`${import.meta.env.BASE_URL}Data_Resume.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="ml-2 inline-flex items-center rounded-[9px] bg-brand-text px-4 py-2 font-mono text-[11.5px] font-semibold uppercase tracking-[0.06em] text-brand-btn-fg transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(81,228,255,0.28)]"
-            >
-              Resume ↗
-            </a>
-          </li>
           <li className="ml-3">
             <ThemeToggle />
           </li>
