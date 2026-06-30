@@ -28,7 +28,7 @@ export default function Experience() {
                     job.current ? 'bg-brand' : 'bg-border-strong',
                   ].join(' ')}
                 >
-                  {job.current && <span className="h-2 w-2 rounded-full bg-[#07080A]" />}
+                  {job.current && <span className="h-2 w-2 rounded-full bg-bg" />}
                 </span>
 
                 <div className="rounded-2xl border border-border bg-surface p-6">
