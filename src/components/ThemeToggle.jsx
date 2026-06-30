@@ -14,7 +14,7 @@ export default function ThemeToggle() {
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
-          key={dark ? 'moon' : 'sun'}
+          key={dark ? 'sun' : 'moon'}
           initial={{ opacity: 0, rotate: -30, scale: 0.8 }}
           animate={{ opacity: 1, rotate: 0, scale: 1 }}
           exit={{ opacity: 0, rotate: 30, scale: 0.8 }}
