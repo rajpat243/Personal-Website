@@ -87,7 +87,7 @@ export default function Navbar() {
               Resume ↗
             </a>
           </li>
-          <li>
+          <li className="ml-3">
             <ThemeToggle />
           </li>
         </ul>

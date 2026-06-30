@@ -31,7 +31,7 @@ export default function Home() {
     <PageTransition title="Raj Patel — Data Engineer" description={profile.tagline}>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative z-10 overflow-hidden bg-bg">
+      <section className="relative z-10 overflow-hidden bg-hero-bg">
         <div aria-hidden="true" className="pointer-events-none absolute -top-48 -left-40 h-[620px] w-[620px] rounded-full bg-brand/10 blur-[80px]" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-64 -right-44 h-[640px] w-[640px] rounded-full bg-[#38bdf8]/8 blur-[80px]" />
 
@@ -52,7 +52,7 @@ export default function Home() {
 
             <motion.h1
               variants={item}
-              className="font-display text-5xl font-bold leading-[0.96] tracking-tight text-text sm:text-7xl lg:text-[84px]"
+              className="font-display text-5xl font-bold leading-[0.96] tracking-tight text-hero-text sm:text-7xl lg:text-[84px]"
             >
               {profile.name}
             </motion.h1>
@@ -61,7 +61,7 @@ export default function Home() {
               variants={item}
               className="mt-5 flex items-baseline gap-3 font-display text-2xl font-semibold sm:text-3xl"
             >
-              <span className="text-text-soft">Building</span>
+              <span className="text-hero-text-soft">Building</span>
               <RotatingWords
                 words={profile.roles}
                 className="text-brand"
@@ -70,7 +70,7 @@ export default function Home() {
 
             <motion.p
               variants={item}
-              className="mt-6 max-w-[480px] text-[17px] leading-[1.65] text-text-soft"
+              className="mt-6 max-w-[480px] text-[17px] leading-[1.65] text-hero-text-soft"
             >
               {profile.tagline}
             </motion.p>
@@ -86,7 +86,7 @@ export default function Home() {
                 href={contact.resume}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-[11px] border border-border-strong px-6 py-3 text-sm font-semibold text-text transition-colors hover:bg-surface-raised hover:border-border-strong"
+                className="inline-flex items-center gap-2 rounded-[11px] border border-hero-border px-6 py-3 text-sm font-semibold text-hero-text transition-colors hover:bg-hero-surface-raised hover:border-hero-border"
               >
                 <DownloadIcon className="h-4 w-4" />
                 Download Resume
@@ -98,23 +98,23 @@ export default function Home() {
                 href={contact.github}
                 target="_blank"
                 rel="noreferrer"
-                className="font-mono text-xs tracking-[0.05em] text-text-xsoft transition-colors hover:text-brand"
+                className="font-mono text-xs tracking-[0.05em] text-hero-text-xsoft transition-colors hover:text-brand"
               >
                 GITHUB
               </a>
-              <span className="h-1 w-1 rounded-full bg-border-strong" />
+              <span className="h-1 w-1 rounded-full bg-white/20" />
               <a
                 href={contact.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="font-mono text-xs tracking-[0.05em] text-text-xsoft transition-colors hover:text-brand"
+                className="font-mono text-xs tracking-[0.05em] text-hero-text-xsoft transition-colors hover:text-brand"
               >
                 LINKEDIN
               </a>
-              <span className="h-1 w-1 rounded-full bg-border-strong" />
+              <span className="h-1 w-1 rounded-full bg-white/20" />
               <a
                 href={`mailto:${contact.email}`}
-                className="font-mono text-xs tracking-[0.05em] text-text-xsoft transition-colors hover:text-brand"
+                className="font-mono text-xs tracking-[0.05em] text-hero-text-xsoft transition-colors hover:text-brand"
               >
                 EMAIL
               </a>

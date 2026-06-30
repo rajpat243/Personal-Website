@@ -21,19 +21,31 @@
   --color-text: var(--text);
   --color-text-soft: var(--text-soft);
   --color-text-xsoft: var(--text-xsoft);
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-text: var(--hero-text);
+  --color-hero-text-soft: var(--hero-text-soft);
+  --color-hero-text-xsoft: var(--hero-text-xsoft);
+  --color-hero-border: var(--hero-border);
+  --color-hero-surface-raised: var(--hero-surface-raised);
 }
 
 :root {
-  --bg: #F0F2F5;
-  --surface: #FFFFFF;
-  --surface-raised: #E8EAED;
-  --border: rgba(0,0,0,0.08);
-  --border-strong: rgba(0,0,0,0.15);
+  --bg: #D6DBE4;
+  --surface: #E2E5EC;
+  --surface-raised: #C8CDD8;
+  --border: rgba(0,0,0,0.10);
+  --border-strong: rgba(0,0,0,0.18);
   --text: #111318;
   --text-soft: #5C6370;
   --text-xsoft: #8A909B;
-  --dot-grid: rgba(0,0,0,0.055);
-  --scrollbar-thumb: #B0B5BE;
+  --dot-grid: rgba(0,0,0,0.06);
+  --scrollbar-thumb: #A0A7B5;
+  --hero-bg: #1A1F2E;
+  --hero-text: #ECEEF1;
+  --hero-text-soft: #9AA1AD;
+  --hero-text-xsoft: #6B7280;
+  --hero-border: rgba(255,255,255,0.15);
+  --hero-surface-raised: rgba(255,255,255,0.06);
 }
 
 .dark {
@@ -47,6 +59,12 @@
   --text-xsoft: #6B7280;
   --dot-grid: rgba(255,255,255,0.022);
   --scrollbar-thumb: #22262c;
+  --hero-bg: #07080A;
+  --hero-text: #ECEEF1;
+  --hero-text-soft: #9AA1AD;
+  --hero-text-xsoft: #6B7280;
+  --hero-border: rgba(255,255,255,0.10);
+  --hero-surface-raised: rgba(255,255,255,0.05);
 }
 
 html {

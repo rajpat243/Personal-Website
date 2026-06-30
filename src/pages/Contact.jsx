@@ -39,15 +39,15 @@ export default function Contact() {
       description="Get in touch with Raj Patel, or download a copy of the resume."
     >
       {/* ── Header ──────────────────────────────────────────────────────── */}
-      <section className="relative z-10 overflow-hidden bg-bg">
+      <section className="relative z-10 overflow-hidden bg-hero-bg">
         <div aria-hidden="true" className="pointer-events-none absolute -top-32 -left-20 h-72 w-72 rounded-full bg-brand/10 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -right-20 h-72 w-72 rounded-full bg-[#38bdf8]/8 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 py-20 sm:py-24">
           <p className="mb-3 font-mono text-[12px] uppercase tracking-[0.16em] text-brand">// Let&apos;s talk</p>
-          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-text sm:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-hero-text sm:text-5xl">
             Let&apos;s build something<br />that scales.
           </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-[1.65] text-text-soft">
+          <p className="mt-5 max-w-xl text-[17px] leading-[1.65] text-hero-text-soft">
             Open to opportunities in data &amp; software engineering. The fastest way to reach me is below.
           </p>
         </div>
