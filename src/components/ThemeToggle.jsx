@@ -10,15 +10,15 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="relative inline-flex h-8 w-14 shrink-0 items-center justify-between rounded-full border border-border bg-surface px-1.5 transition-colors hover:border-border-strong"
+      className="relative inline-flex h-8 w-16 shrink-0 items-center justify-between rounded-full border border-border bg-surface px-2 transition-colors hover:border-border-strong"
     >
       <MoonIcon className={`relative z-10 h-3.5 w-3.5 transition-colors duration-200 ${dark ? 'text-[#07080A]' : 'text-text-soft'}`} />
       <SunIcon className={`relative z-10 h-3.5 w-3.5 transition-colors duration-200 ${dark ? 'text-text-soft' : 'text-[#07080A]'}`} />
       <motion.span
         initial={false}
-        animate={{ x: dark ? -30 : 0 }}
+        animate={{ x: dark ? -34 : 0 }}
         transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-        className="absolute right-px h-6 w-6 rounded-full bg-brand-text"
+        className="absolute right-[3px] h-6 w-6 rounded-full bg-brand-text"
       />
     </button>
   )
