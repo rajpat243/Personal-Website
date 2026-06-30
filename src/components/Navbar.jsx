@@ -69,7 +69,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-brand"
+                        className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-brand-text"
                       />
                     )}
                   </>

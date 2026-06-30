@@ -25,7 +25,7 @@ export default function Experience() {
                 <span
                   className={[
                     'absolute -left-[31px] mt-1.5 grid h-5 w-5 place-items-center rounded-full ring-4 ring-bg',
-                    job.current ? 'bg-brand' : 'bg-border-strong',
+                    job.current ? 'bg-brand-text' : 'bg-border-strong',
                   ].join(' ')}
                 >
                   {job.current && <span className="h-2 w-2 rounded-full bg-bg" />}

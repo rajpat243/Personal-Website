@@ -11,7 +11,7 @@ import aiAssistantImg from '../assets/img/ai_virtual_assistants.png'
 export const profile = {
   name: 'Raj Patel',
   location: 'Hartford, CT',
-  headline: 'Data Engineer @ Travelers',
+  headline: 'Data Engineer',
   tagline:
     'Data Engineer building ETL/ELT pipelines and bringing AI into enterprise analytics.',
   // Rotating words shown in the home hero.
@@ -26,7 +26,7 @@ export const profile = {
 
 export const about = {
   summary:
-    "B.S. in Computer Science (concentration in Software Engineering & Development) from the University of Connecticut. Data Engineer at Travelers, designing data pipelines that power business analytics and integrating AI into enterprise applications. Comfortable across the stack — from ETL/ELT and data architecture to backend services and machine learning — with a strong foundation in software development and testing. I also work hands-on with LLMs and am deeply interested in the entire AI space — it's where I'm most excited to keep learning and growing.",
+    "B.S. in Computer Science (concentration in Software Engineering & Development) from the University of Connecticut. Data Engineer designing data pipelines that power business analytics and integrating AI into enterprise applications. Comfortable across the stack — from ETL/ELT and data architecture to backend services and machine learning — with a strong foundation in software development and testing. I also work hands-on with LLMs and am deeply interested in the entire AI space — it's where I'm most excited to keep learning and growing.",
 }
 
 export const skills = [

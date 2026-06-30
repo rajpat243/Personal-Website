@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-border py-4">
         <p className="text-center font-mono text-xs text-text-xsoft">
-          © 2026 {profile.name} — Hartford, CT
+          © 2026 {profile.name}
         </p>
       </div>
     </footer>
