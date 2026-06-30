@@ -16,7 +16,7 @@ export default function ThemeToggle() {
       <SunIcon className={`relative z-10 h-3.5 w-3.5 transition-colors duration-200 ${dark ? 'text-text-soft' : 'text-[#07080A]'}`} />
       <motion.span
         initial={false}
-        animate={{ x: dark ? -34 : 0 }}
+        animate={{ x: dark ? -32 : 0 }}
         transition={{ type: 'spring', stiffness: 500, damping: 35 }}
         className="absolute right-[3px] h-6 w-6 rounded-full bg-brand-text"
       />
