@@ -19,7 +19,7 @@ Two-layer system using Tailwind v4's `@theme inline`.
 :root {
   --bg: #F0F2F5;
   --surface: #FFFFFF;
-  --surface-raised: #E8EAED;
+  --surface-raised: #E8EAED; 
   --border: rgba(0,0,0,0.08);
   --border-strong: rgba(0,0,0,0.15);
   --text: #111318;
