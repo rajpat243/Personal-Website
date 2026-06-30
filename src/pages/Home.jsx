@@ -285,7 +285,7 @@ export default function Home() {
               </p>
               <Link
                 to="/contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-[12px] bg-brand px-7 py-3.5 font-mono text-sm font-semibold text-[#07080A] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
+                className="mt-8 inline-flex items-center gap-2 rounded-[12px] bg-brand-text px-7 py-3.5 font-mono text-sm font-semibold text-brand-btn-fg transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
               >
                 Get in touch
                 <ArrowRightIcon className="h-4 w-4" />

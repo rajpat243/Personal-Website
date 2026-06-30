@@ -22,6 +22,7 @@
   --color-text-soft: var(--text-soft);
   --color-text-xsoft: var(--text-xsoft);
   --color-brand-text: var(--brand-text);
+  --color-brand-btn-fg: var(--brand-btn-fg);
   --color-hero-bg: var(--hero-bg);
   --color-hero-text: var(--hero-text);
   --color-hero-text-soft: var(--hero-text-soft);
@@ -42,6 +43,7 @@
   --dot-grid: rgba(0,0,0,0.06);
   --scrollbar-thumb: #A0A7B5;
   --brand-text: #0891B2;
+  --brand-btn-fg: #ffffff;
   --etl-accent: #7C3AED;
   --hero-bg: #1A1F2E;
   --hero-text: #ECEEF1;
@@ -63,6 +65,7 @@
   --dot-grid: rgba(255,255,255,0.022);
   --scrollbar-thumb: #22262c;
   --brand-text: #51E4FF;
+  --brand-btn-fg: #07080A;
   --etl-accent: #C6F24E;
   --hero-bg: #07080A;
   --hero-text: #ECEEF1;

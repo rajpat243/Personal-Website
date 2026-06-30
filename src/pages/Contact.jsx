@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   const fieldClass =
-    'w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-text outline-none placeholder:text-text-xsoft transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20'
+    'w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-text outline-none placeholder:text-text-xsoft transition-colors focus:border-brand-text focus:ring-2 focus:ring-brand-text/20'
 
   return (
     <PageTransition
