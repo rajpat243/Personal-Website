@@ -45,7 +45,7 @@ export default function Experience() {
                   <ul className="mt-4 space-y-2.5">
                     {job.points.map((pt, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-text-soft">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-text" />
                         {pt}
                       </li>
                     ))}
@@ -69,7 +69,7 @@ export default function Experience() {
             {certifications.map((cert, i) => (
               <Reveal key={cert.name} delay={i * 0.08}>
                 <div className="group flex h-full flex-col items-center rounded-2xl border border-border bg-surface p-6 text-center transition-colors hover:border-brand">
-                  <div className="grid h-16 w-16 place-items-center rounded-xl bg-surface-raised text-[#FF9900] transition-transform group-hover:scale-105">
+                  <div className="grid h-16 w-16 place-items-center rounded-xl bg-[#1A1F2E] text-[#FF9900] transition-transform group-hover:scale-105">
                     <AwsIcon className="h-9 w-9" />
                   </div>
                   <h3 className="mt-4 font-display text-sm font-semibold leading-snug text-text">{cert.name}</h3>

@@ -48,7 +48,7 @@ export default function Projects() {
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-bg/10 via-transparent to-bg/90" />
-                <span className="absolute top-3 left-3 rounded-[7px] border border-border bg-bg/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-text-soft backdrop-blur-md">
+                <span className="absolute top-3 left-3 rounded-[7px] border border-border bg-bg/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-text backdrop-blur-md">
                   {p.context}
                 </span>
               </div>
@@ -59,7 +59,7 @@ export default function Projects() {
                 <ul className="mt-4 flex-1 space-y-2.5">
                   {p.points.map((pt, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-text-soft">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-text" />
                       {pt}
                     </li>
                   ))}

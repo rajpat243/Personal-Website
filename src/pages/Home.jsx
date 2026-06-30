@@ -229,7 +229,7 @@ export default function Home() {
                       </div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-b from-bg/10 via-transparent to-bg/90" />
-                    <span className="absolute top-3 left-3 rounded-[7px] border border-border bg-bg/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-text-soft backdrop-blur-md">
+                    <span className="absolute top-3 left-3 rounded-[7px] border border-border bg-bg/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-text backdrop-blur-md">
                       {p.context}
                     </span>
                   </div>
@@ -271,9 +271,9 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <div
-              className="rounded-3xl border border-border p-16 text-center sm:p-20"
+              className="rounded-3xl border border-border bg-surface-raised p-16 text-center sm:p-20"
               style={{
-                background: 'linear-gradient(160deg, rgba(81,228,255,0.06), rgba(56,189,248,0.04) 60%, rgba(255,255,255,0.01))',
+                backgroundImage: 'linear-gradient(160deg, rgba(81,228,255,0.08), rgba(56,189,248,0.05) 60%, transparent)',
               }}
             >
               <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-brand-text">// Let's talk</p>

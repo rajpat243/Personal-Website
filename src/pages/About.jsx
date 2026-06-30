@@ -20,7 +20,7 @@ export default function About() {
               style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '24px' }}
             >
               Comfortable across the stack — from{' '}
-              <span style={{ color: '#C6F24E' }}>ETL</span> to{' '}
+              <span style={{ color: '#7C3AED' }}>ETL</span> to{' '}
               <span className="text-brand-text">AI</span>.
             </h2>
             <p className="text-lg leading-relaxed text-text-soft">{about.summary}</p>
@@ -30,7 +30,7 @@ export default function About() {
               <ul className="mt-4 space-y-2">
                 {education.activities.map((a) => (
                   <li key={a} className="flex items-start gap-3 text-text-soft">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-text" />
                     {a}
                   </li>
                 ))}
