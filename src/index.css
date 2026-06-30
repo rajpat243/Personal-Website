@@ -42,6 +42,7 @@
   --dot-grid: rgba(0,0,0,0.06);
   --scrollbar-thumb: #A0A7B5;
   --brand-text: #0891B2;
+  --etl-accent: #7C3AED;
   --hero-bg: #1A1F2E;
   --hero-text: #ECEEF1;
   --hero-text-soft: #9AA1AD;
@@ -62,6 +63,7 @@
   --dot-grid: rgba(255,255,255,0.022);
   --scrollbar-thumb: #22262c;
   --brand-text: #51E4FF;
+  --etl-accent: #C6F24E;
   --hero-bg: #07080A;
   --hero-text: #ECEEF1;
   --hero-text-soft: #9AA1AD;

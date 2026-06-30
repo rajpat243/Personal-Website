@@ -20,7 +20,7 @@ export default function About() {
               style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '24px' }}
             >
               Comfortable across the stack — from{' '}
-              <span style={{ color: '#7C3AED' }}>ETL</span> to{' '}
+              <span style={{ color: 'var(--etl-accent)' }}>ETL</span> to{' '}
               <span className="text-brand-text">AI</span>.
             </h2>
             <p className="text-lg leading-relaxed text-text-soft">{about.summary}</p>
