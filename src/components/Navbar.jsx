@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MenuIcon, CloseIcon } from './Icons.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 
 const navLinks = [
   { to: '/', label: 'Home', end: true },
@@ -30,7 +31,7 @@ export default function Navbar() {
   const linkClass = ({ isActive }) =>
     [
       'relative font-mono text-[11.5px] font-medium uppercase tracking-[0.08em] transition-colors px-3 py-2 rounded-lg',
-      isActive ? 'text-brand' : 'text-white/60 hover:text-white',
+      isActive ? 'text-brand' : 'text-text-soft hover:text-text',
     ].join(' ')
 
   return (
@@ -38,7 +39,7 @@ export default function Navbar() {
       className={[
         'sticky top-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-[#07080A]/80 backdrop-blur-md border-b border-white/10'
+          ? 'bg-bg/80 backdrop-blur-md border-b border-border'
           : 'bg-transparent',
       ].join(' ')}
     >
@@ -50,9 +51,9 @@ export default function Navbar() {
       >
         <Link to="/" className="flex items-center gap-3 text-decoration-none">
           <span className="grid h-8 w-8 place-items-center rounded-lg shadow">
-              <img src={`${import.meta.env.BASE_URL}favicon.png`} alt="Logo" className="h-8 w-8 object-contain" />
-            </span>
-          <span className="hidden font-display text-[15px] font-semibold tracking-tight text-white sm:inline">
+            <img src={`${import.meta.env.BASE_URL}favicon.png`} alt="Logo" className="h-8 w-8 object-contain" />
+          </span>
+          <span className="hidden font-display text-[15px] font-semibold tracking-tight text-text sm:inline">
             Raj Patel
           </span>
         </Link>
@@ -86,18 +87,24 @@ export default function Navbar() {
               Resume ↗
             </a>
           </li>
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          className="grid h-10 w-10 place-items-center rounded-lg text-white/70 hover:bg-white/10 md:hidden"
-        >
-          {menuOpen ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            className="grid h-10 w-10 place-items-center rounded-lg text-text-soft hover:bg-surface-raised"
+          >
+            {menuOpen ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -108,7 +115,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-b border-white/10 bg-[#07080A]/95 backdrop-blur-md md:hidden"
+            className="overflow-hidden border-b border-border bg-bg/95 backdrop-blur-md md:hidden"
           >
             <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-3">
               {navLinks.map((l) => (
@@ -119,7 +126,7 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       [
                         'block rounded-lg px-3 py-2.5 font-mono text-sm font-medium uppercase tracking-wide transition-colors',
-                        isActive ? 'bg-brand/10 text-brand' : 'text-white/60 hover:bg-white/8 hover:text-white',
+                        isActive ? 'bg-brand/10 text-brand' : 'text-text-soft hover:bg-surface-raised hover:text-text',
                       ].join(' ')
                     }
                   >
