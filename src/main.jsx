@@ -2,13 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
+import { ThemeProvider } from './context/ThemeContext.jsx'
 import './index.css'
 
-// basename keeps client-side routes working under the /Personal-Website/ subpath.
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
 )
