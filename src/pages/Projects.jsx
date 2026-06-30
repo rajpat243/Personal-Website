@@ -32,9 +32,9 @@ export default function Projects() {
                 hidden: reduce ? { opacity: 1 } : { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
               }}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[.022] transition-all hover:-translate-y-1.5 hover:border-brand hover:shadow-[0_18px_44px_rgba(0,0,0,0.5)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:-translate-y-1.5 hover:border-brand hover:shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-[#0c0e11]">
+              <div className="relative aspect-[16/9] overflow-hidden bg-surface-raised">
                 {p.image ? (
                   <img
                     src={p.image}
@@ -43,22 +43,22 @@ export default function Projects() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center px-6 text-center font-display text-2xl font-bold text-white/30">
+                  <div className="flex h-full w-full items-center justify-center px-6 text-center font-display text-2xl font-bold text-text-xsoft">
                     {p.title}
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#07080A]/10 via-transparent to-[#07080A]/90" />
-                <span className="absolute top-3 left-3 rounded-[7px] border border-white/15 bg-[#07080A]/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-white/70 backdrop-blur-md">
+                <div className="absolute inset-0 bg-gradient-to-b from-bg/10 via-transparent to-bg/90" />
+                <span className="absolute top-3 left-3 rounded-[7px] border border-border bg-bg/70 px-2.5 py-1 font-mono text-[10px] tracking-wide text-text-soft backdrop-blur-md">
                   {p.context}
                 </span>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h2 className="font-display text-xl font-bold text-[#F0F2F5]">{p.title}</h2>
+                <h2 className="font-display text-xl font-bold text-text">{p.title}</h2>
 
                 <ul className="mt-4 flex-1 space-y-2.5">
                   {p.points.map((pt, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-[#C3C9D4]">
+                    <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-text-soft">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
                       {pt}
                     </li>
@@ -77,19 +77,19 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-5 border-t border-white/10 pt-4">
+                <div className="mt-5 border-t border-border pt-4">
                   {p.github ? (
                     <a
                       href={p.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-colors hover:text-brand"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-text-soft transition-colors hover:text-brand"
                     >
                       <GithubIcon className="h-5 w-5" />
                       View source
                     </a>
                   ) : (
-                    <span className="font-mono text-sm text-white/50">Private project — no public repo</span>
+                    <span className="font-mono text-sm text-text-xsoft">Private project — no public repo</span>
                   )}
                 </div>
               </div>

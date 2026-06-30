@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   const fieldClass =
-    'w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/30 transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20'
+    'w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-text outline-none placeholder:text-text-xsoft transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20'
 
   return (
     <PageTransition
@@ -39,15 +39,15 @@ export default function Contact() {
       description="Get in touch with Raj Patel, or download a copy of the resume."
     >
       {/* ── Header ──────────────────────────────────────────────────────── */}
-      <section className="relative z-10 overflow-hidden bg-[#07080A]">
+      <section className="relative z-10 overflow-hidden bg-bg">
         <div aria-hidden="true" className="pointer-events-none absolute -top-32 -left-20 h-72 w-72 rounded-full bg-brand/10 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -right-20 h-72 w-72 rounded-full bg-[#38bdf8]/8 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 py-20 sm:py-24">
           <p className="mb-3 font-mono text-[12px] uppercase tracking-[0.16em] text-brand">// Let&apos;s talk</p>
-          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-[#F4F6F8] sm:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-text sm:text-5xl">
             Let&apos;s build something<br />that scales.
           </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-[1.65] text-[#C3C9D4]">
+          <p className="mt-5 max-w-xl text-[17px] leading-[1.65] text-text-soft">
             Open to opportunities in data &amp; software engineering. The fastest way to reach me is below.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Contact() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
           {/* Channels + resume */}
           <Reveal>
-            <h2 className="font-display text-2xl font-bold text-white">Reach me directly</h2>
+            <h2 className="font-display text-2xl font-bold text-text">Reach me directly</h2>
             <ul className="mt-6 space-y-3">
               {channels.map(({ label, value, href, Icon }) => (
                 <li key={label}>
@@ -66,16 +66,16 @@ export default function Contact() {
                     href={href}
                     target={href.startsWith('mailto:') ? undefined : '_blank'}
                     rel="noreferrer"
-                    className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[.022] p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)]"
+                    className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
                   >
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand text-[#07080A]">
                       <Icon className="h-5 w-5" />
                     </span>
                     <span>
-                      <span className="block text-sm font-semibold text-white">{label}</span>
-                      <span className="block text-sm text-[#C3C9D4]">{value}</span>
+                      <span className="block text-sm font-semibold text-text">{label}</span>
+                      <span className="block text-sm text-text-soft">{value}</span>
                     </span>
-                    <ArrowRightIcon className="ml-auto h-4 w-4 text-white/20 transition-colors group-hover:text-brand" />
+                    <ArrowRightIcon className="ml-auto h-4 w-4 text-text-xsoft transition-colors group-hover:text-brand" />
                   </a>
                 </li>
               ))}
@@ -96,28 +96,28 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <form
               onSubmit={onSubmit}
-              className="rounded-2xl border border-white/10 bg-white/[.022] p-6 sm:p-8"
+              className="rounded-2xl border border-border bg-surface p-6 sm:p-8"
             >
-              <h2 className="font-display text-2xl font-bold text-white">Send a message</h2>
-              <p className="mt-2 text-sm text-[#C3C9D4]">
+              <h2 className="font-display text-2xl font-bold text-text">Send a message</h2>
+              <p className="mt-2 text-sm text-text-soft">
                 This opens your email client with the message prefilled.
               </p>
 
               <div className="mt-6 space-y-4">
                 <div>
-                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-white/70">
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-text-soft">
                     Name
                   </label>
                   <input id="name" type="text" required value={form.name} onChange={update('name')} className={fieldClass} placeholder="Your name" />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-white/70">
+                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-text-soft">
                     Email
                   </label>
                   <input id="email" type="email" value={form.email} onChange={update('email')} className={fieldClass} placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-white/70">
+                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-text-soft">
                     Message
                   </label>
                   <textarea id="message" required rows={5} value={form.message} onChange={update('message')} className={`${fieldClass} resize-y`} placeholder="What's on your mind?" />
