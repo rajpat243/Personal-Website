@@ -69,7 +69,7 @@ export default function Projects() {
                   {p.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded-md border px-2.5 py-1 font-mono text-[10px] text-brand"
+                      className="rounded-md border px-2.5 py-1 font-mono text-[10px] text-brand-text"
                       style={{ borderColor: 'rgba(81,228,255,0.35)' }}
                     >
                       {t}
@@ -83,7 +83,7 @@ export default function Projects() {
                       href={p.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-text-soft transition-colors hover:text-brand"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-text-soft transition-colors hover:text-brand-text"
                     >
                       <GithubIcon className="h-5 w-5" />
                       View source

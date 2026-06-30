@@ -134,7 +134,7 @@ export default function Home() {
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
               <div className="border-l border-border px-6 py-10">
-                <div className="font-display text-5xl font-bold leading-none tracking-tight text-brand">
+                <div className="font-display text-5xl font-bold leading-none tracking-tight text-brand-text">
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
                 <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-text-soft">
@@ -158,7 +158,7 @@ export default function Home() {
           {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((label, i) => (
             <span key={i} className="flex items-center gap-10">
               <span className="text-text-xsoft">{label}</span>
-              <span className="text-brand text-xs">◆</span>
+              <span className="text-brand-text text-xs">◆</span>
             </span>
           ))}
         </div>
@@ -169,7 +169,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <div className="mb-12 flex items-center gap-4">
-              <span className="font-mono text-[12px] text-brand">02</span>
+              <span className="font-mono text-[12px] text-brand-text">02</span>
               <span className="font-mono text-[12px] uppercase tracking-[0.22em] text-text-soft">Skills &amp; Toolbox</span>
               <span className="h-px flex-1 bg-border" />
             </div>
@@ -186,7 +186,7 @@ export default function Home() {
                     {group.items.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-lg border border-border bg-surface-raised px-3 py-1.5 font-mono text-[12px] text-text-soft transition-all hover:-translate-y-0.5 hover:border-brand hover:text-brand"
+                        className="rounded-lg border border-border bg-surface-raised px-3 py-1.5 font-mono text-[12px] text-text-soft transition-all hover:-translate-y-0.5 hover:border-brand hover:text-brand-text"
                       >
                         {skill}
                       </span>
@@ -204,13 +204,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="mb-12 flex items-end justify-between gap-4">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-[12px] text-brand">03</span>
+              <span className="font-mono text-[12px] text-brand-text">03</span>
               <span className="font-mono text-[12px] uppercase tracking-[0.22em] text-text-soft">Selected Projects</span>
               <span className="h-px w-20 bg-border" />
             </div>
             <Link
               to="/projects"
-              className="hidden shrink-0 items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-text-xsoft transition-colors hover:text-brand sm:inline-flex"
+              className="hidden shrink-0 items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-text-xsoft transition-colors hover:text-brand-text sm:inline-flex"
             >
               All projects <ArrowRightIcon className="h-3.5 w-3.5" />
             </Link>
@@ -240,7 +240,7 @@ export default function Home() {
                       {p.tech.slice(0, 3).map((t) => (
                         <span
                           key={t}
-                          className="rounded-md border px-2 py-0.5 font-mono text-[10px] text-brand"
+                          className="rounded-md border px-2 py-0.5 font-mono text-[10px] text-brand-text"
                           style={{ borderColor: 'rgba(81,228,255,0.35)' }}
                         >
                           {t}
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 sm:hidden">
-            <Link to="/projects" className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-text-xsoft hover:text-brand">
+            <Link to="/projects" className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-text-xsoft hover:text-brand-text">
               All projects <ArrowRightIcon className="h-3.5 w-3.5" />
             </Link>
           </div>
@@ -276,7 +276,7 @@ export default function Home() {
                 background: 'linear-gradient(160deg, rgba(81,228,255,0.06), rgba(56,189,248,0.04) 60%, rgba(255,255,255,0.01))',
               }}
             >
-              <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-brand">// Let's talk</p>
+              <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-brand-text">// Let's talk</p>
               <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-text sm:text-5xl">
                 Let&apos;s build something<br />that scales.
               </h2>

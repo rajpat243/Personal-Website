@@ -21,7 +21,7 @@ export default function About() {
             >
               Comfortable across the stack — from{' '}
               <span style={{ color: '#C6F24E' }}>ETL</span> to{' '}
-              <span className="text-brand">AI</span>.
+              <span className="text-brand-text">AI</span>.
             </h2>
             <p className="text-lg leading-relaxed text-text-soft">{about.summary}</p>
 
@@ -46,7 +46,7 @@ export default function About() {
                 <p className="font-semibold text-text">{education.school}</p>
                 <p className="mt-1 text-sm text-text-soft">{education.degree}</p>
                 <div className="mt-3 flex items-center gap-3 text-sm">
-                  <span className="rounded-full bg-brand/15 px-3 py-1 font-medium text-brand">
+                  <span className="rounded-full bg-brand/15 px-3 py-1 font-medium text-brand-text">
                     {education.date}
                   </span>
                   <span className="font-medium text-text-soft">GPA {education.gpa}</span>

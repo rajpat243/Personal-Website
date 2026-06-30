@@ -27,7 +27,7 @@ export default function Footer() {
               target={href.startsWith('mailto:') ? undefined : '_blank'}
               rel="noreferrer"
               aria-label={label}
-              className="grid h-10 w-10 place-items-center rounded-full border border-border-strong text-text-xsoft transition-colors hover:border-brand hover:text-brand"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border-strong text-text-xsoft transition-colors hover:border-brand hover:text-brand-text"
             >
               <Icon className="h-5 w-5" />
             </a>

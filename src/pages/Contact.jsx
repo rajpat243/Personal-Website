@@ -75,7 +75,7 @@ export default function Contact() {
                       <span className="block text-sm font-semibold text-text">{label}</span>
                       <span className="block text-sm text-text-soft">{value}</span>
                     </span>
-                    <ArrowRightIcon className="ml-auto h-4 w-4 text-text-xsoft transition-colors group-hover:text-brand" />
+                    <ArrowRightIcon className="ml-auto h-4 w-4 text-text-xsoft transition-colors group-hover:text-brand-text" />
                   </a>
                 </li>
               ))}

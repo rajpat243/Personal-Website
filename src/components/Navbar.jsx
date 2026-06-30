@@ -31,7 +31,7 @@ export default function Navbar() {
   const linkClass = ({ isActive }) =>
     [
       'relative font-mono text-[11.5px] font-medium uppercase tracking-[0.08em] transition-colors px-3 py-2 rounded-lg',
-      isActive ? 'text-brand' : 'text-text-soft hover:text-text',
+      isActive ? 'text-brand-text' : 'text-text-soft hover:text-text',
     ].join(' ')
 
   return (
@@ -126,7 +126,7 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       [
                         'block rounded-lg px-3 py-2.5 font-mono text-sm font-medium uppercase tracking-wide transition-colors',
-                        isActive ? 'bg-brand/10 text-brand' : 'text-text-soft hover:bg-surface-raised hover:text-text',
+                        isActive ? 'bg-brand/10 text-brand-text' : 'text-text-soft hover:bg-surface-raised hover:text-text',
                       ].join(' ')
                     }
                   >

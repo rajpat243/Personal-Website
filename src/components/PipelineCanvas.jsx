@@ -132,7 +132,7 @@ export default function PipelineCanvas() {
       <div className="flex items-center justify-between border-t border-border px-4 py-3">
         <span className="font-mono text-[10.5px] tracking-wide text-text-xsoft">dbt · spark · bedrock</span>
         <span className="font-mono text-[10.5px] tracking-wide text-text-xsoft">
-          uptime <span className="text-brand">99.98%</span>
+          uptime <span className="text-brand-text">99.98%</span>
         </span>
       </div>
     </div>

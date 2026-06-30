@@ -35,7 +35,7 @@ export default function Experience() {
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 className="font-display text-lg font-bold text-text">{job.role}</h3>
-                      <p className="font-medium text-brand">{job.company}</p>
+                      <p className="font-medium text-brand-text">{job.company}</p>
                     </div>
                     <div className="text-right text-sm text-text-soft">
                       <p className="font-medium">{job.period}</p>
