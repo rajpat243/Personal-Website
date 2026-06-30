@@ -18,7 +18,7 @@ export default function ThemeToggle() {
         initial={false}
         animate={{ x: dark ? -24 : 0 }}
         transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-        className="absolute right-1 h-6 w-6 rounded-full bg-brand"
+        className="absolute right-1 h-6 w-6 rounded-full bg-brand-text"
       />
     </button>
   )

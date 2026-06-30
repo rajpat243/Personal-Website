@@ -186,7 +186,7 @@ export default function Home() {
                     {group.items.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-lg border border-border bg-surface-raised px-3 py-1.5 font-mono text-[12px] text-text-soft transition-all hover:-translate-y-0.5 hover:border-brand hover:text-brand-text"
+                        className="rounded-lg border border-border bg-surface-raised px-3 py-1.5 font-mono text-[12px] text-text-soft transition-all hover:-translate-y-0.5 hover:border-brand-text hover:text-brand-text"
                       >
                         {skill}
                       </span>
@@ -219,7 +219,7 @@ export default function Home() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
-                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:-translate-y-1.5 hover:border-brand hover:shadow-[0_18px_44px_rgba(0,0,0,0.18)]">
+                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:-translate-y-1.5 hover:border-brand-text hover:shadow-[0_18px_44px_rgba(0,0,0,0.18)]">
                   <div className="relative aspect-[16/10] overflow-hidden bg-surface-raised">
                     {p.image ? (
                       <img src={p.image} alt={p.title} className="h-full w-full object-cover" loading="lazy" />

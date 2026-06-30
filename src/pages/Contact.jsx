@@ -66,9 +66,9 @@ export default function Contact() {
                     href={href}
                     target={href.startsWith('mailto:') ? undefined : '_blank'}
                     rel="noreferrer"
-                    className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
+                    className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-brand-text hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
                   >
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand text-[#07080A]">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-text text-brand-btn-fg">
                       <Icon className="h-5 w-5" />
                     </span>
                     <span>
@@ -85,7 +85,7 @@ export default function Contact() {
               href={contact.resume}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-[11px] bg-brand px-6 py-3 text-sm font-semibold text-[#07080A] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
+              className="mt-6 inline-flex items-center gap-2 rounded-[11px] bg-brand-text px-6 py-3 text-sm font-semibold text-brand-btn-fg transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
             >
               <DownloadIcon className="h-4 w-4" />
               Download Resume
@@ -126,7 +126,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[11px] bg-brand px-6 py-3 text-sm font-semibold text-[#07080A] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[11px] bg-brand-text px-6 py-3 text-sm font-semibold text-brand-btn-fg transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(81,228,255,0.26)]"
               >
                 Send message
                 <ArrowRightIcon className="h-4 w-4" />

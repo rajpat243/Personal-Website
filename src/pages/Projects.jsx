@@ -32,7 +32,7 @@ export default function Projects() {
                 hidden: reduce ? { opacity: 1 } : { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
               }}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:-translate-y-1.5 hover:border-brand hover:shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:-translate-y-1.5 hover:border-brand-text hover:shadow-[0_18px_44px_rgba(0,0,0,0.18)]"
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-surface-raised">
                 {p.image ? (

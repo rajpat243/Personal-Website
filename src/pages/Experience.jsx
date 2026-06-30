@@ -68,7 +68,7 @@ export default function Experience() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {certifications.map((cert, i) => (
               <Reveal key={cert.name} delay={i * 0.08}>
-                <div className="group flex h-full flex-col items-center rounded-2xl border border-border bg-surface p-6 text-center transition-colors hover:border-brand">
+                <div className="group flex h-full flex-col items-center rounded-2xl border border-border bg-surface p-6 text-center transition-colors hover:border-brand-text">
                   <div className="grid h-16 w-16 place-items-center rounded-xl bg-[#1A1F2E] text-[#FF9900] transition-transform group-hover:scale-105">
                     <AwsIcon className="h-9 w-9" />
                   </div>
