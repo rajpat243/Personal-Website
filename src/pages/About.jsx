@@ -16,20 +16,20 @@ export default function About() {
           {/* Bio */}
           <Reveal className="lg:col-span-2">
             <h2
-              className="font-display font-bold leading-[1.1] tracking-[-0.02em] text-[#F4F6F8]"
+              className="font-display font-bold leading-[1.1] tracking-[-0.02em] text-text"
               style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '24px' }}
             >
               Comfortable across the stack — from{' '}
               <span style={{ color: '#C6F24E' }}>ETL</span> to{' '}
               <span className="text-brand">AI</span>.
             </h2>
-            <p className="text-lg leading-relaxed text-[#C3C9D4]">{about.summary}</p>
+            <p className="text-lg leading-relaxed text-text-soft">{about.summary}</p>
 
             <div className="mt-10">
-              <h3 className="font-display text-xl font-bold text-white">Activities &amp; Leadership</h3>
+              <h3 className="font-display text-xl font-bold text-text">Activities &amp; Leadership</h3>
               <ul className="mt-4 space-y-2">
                 {education.activities.map((a) => (
-                  <li key={a} className="flex items-start gap-3 text-[#C3C9D4]">
+                  <li key={a} className="flex items-start gap-3 text-text-soft">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
                     {a}
                   </li>
@@ -40,28 +40,28 @@ export default function About() {
 
           {/* Education card */}
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-white/10 bg-white/[.022] p-6">
-              <h3 className="font-display text-lg font-bold text-white">Education</h3>
+            <div className="rounded-2xl border border-border bg-surface p-6">
+              <h3 className="font-display text-lg font-bold text-text">Education</h3>
               <div className="mt-4">
-                <p className="font-semibold text-white">{education.school}</p>
-                <p className="mt-1 text-sm text-[#C3C9D4]">{education.degree}</p>
+                <p className="font-semibold text-text">{education.school}</p>
+                <p className="mt-1 text-sm text-text-soft">{education.degree}</p>
                 <div className="mt-3 flex items-center gap-3 text-sm">
                   <span className="rounded-full bg-brand/15 px-3 py-1 font-medium text-brand">
                     {education.date}
                   </span>
-                  <span className="font-medium text-[#C3C9D4]">GPA {education.gpa}</span>
+                  <span className="font-medium text-text-soft">GPA {education.gpa}</span>
                 </div>
               </div>
 
               <div className="mt-6">
-                <p className="font-mono text-[11px] font-semibold uppercase tracking-wide text-white/40">
+                <p className="font-mono text-[11px] font-semibold uppercase tracking-wide text-text-xsoft">
                   Relevant Coursework
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {education.coursework.map((c) => (
                     <span
                       key={c}
-                      className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-[11px] text-[#C3C9D4]"
+                      className="rounded-lg border border-border bg-surface-raised px-3 py-1.5 font-mono text-[11px] text-text-soft"
                     >
                       {c}
                     </span>
