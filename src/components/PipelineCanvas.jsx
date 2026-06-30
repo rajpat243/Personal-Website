@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { useReducedMotion } from 'framer-motion'
+import { useTheme } from '../context/ThemeContext.jsx'
 
 const NODES = [
   { x: 0.10, y: 0.26, label: 'SOURCE' },
@@ -17,6 +18,7 @@ export default function PipelineCanvas() {
   const canvasRef = useRef(null)
   const deadRef = useRef(false)
   const reduce = useReducedMotion()
+  const { dark } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -26,6 +28,10 @@ export default function PipelineCanvas() {
     let particles = []
     let W = 0, H = 0
     const dpr = Math.min(window.devicePixelRatio || 1, 2)
+
+    const edgeColor = dark ? 'rgba(255,255,255,0.10)' : 'rgba(0,0,0,0.12)'
+    const nodeFill = dark ? '#0B0D10' : '#F0F2F5'
+    const nodeLabel = dark ? 'rgba(255,255,255,0.52)' : 'rgba(0,0,0,0.55)'
 
     const resize = () => {
       W = canvas.clientWidth
@@ -53,7 +59,7 @@ export default function PipelineCanvas() {
         ctx.beginPath()
         ctx.moveTo(p1.x, p1.y)
         ctx.lineTo(p2.x, p2.y)
-        ctx.strokeStyle = 'rgba(255,255,255,0.10)'
+        ctx.strokeStyle = edgeColor
         ctx.lineWidth = 1
         ctx.stroke()
       })
@@ -88,7 +94,7 @@ export default function PipelineCanvas() {
         const p = pos(n)
         ctx.beginPath()
         ctx.arc(p.x, p.y, 4.5, 0, 6.283)
-        ctx.fillStyle = '#0B0D10'
+        ctx.fillStyle = nodeFill
         ctx.fill()
         ctx.lineWidth = 1.4
         ctx.strokeStyle = ACC
@@ -97,7 +103,7 @@ export default function PipelineCanvas() {
         ctx.stroke()
         ctx.shadowBlur = 0
         ctx.font = "10px 'JetBrains Mono', monospace"
-        ctx.fillStyle = 'rgba(255,255,255,0.52)'
+        ctx.fillStyle = nodeLabel
         ctx.textAlign = 'center'
         ctx.fillText(n.label, p.x, p.y - 13)
       })
@@ -111,21 +117,21 @@ export default function PipelineCanvas() {
       deadRef.current = true
       if (ro) ro.disconnect()
     }
-  }, [reduce])
+  }, [reduce, dark])
 
   return (
-    <div className="overflow-hidden rounded-[18px] border border-white/10 bg-white/[.03]">
-      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-        <span className="flex items-center gap-2 font-mono text-[11px] tracking-wide text-white/50">
+    <div className="overflow-hidden rounded-[18px] border border-border bg-surface">
+      <div className="flex items-center justify-between border-b border-border px-4 py-3">
+        <span className="flex items-center gap-2 font-mono text-[11px] tracking-wide text-text-soft">
           <span className="pulse-glow h-2 w-2 rounded-full bg-brand" />
           pipeline.live
         </span>
-        <span className="font-mono text-[11px] tracking-wide text-white/30">● STREAMING</span>
+        <span className="font-mono text-[11px] tracking-wide text-text-xsoft">● STREAMING</span>
       </div>
       <canvas ref={canvasRef} className="block w-full" style={{ height: '340px' }} />
-      <div className="flex items-center justify-between border-t border-white/10 px-4 py-3">
-        <span className="font-mono text-[10.5px] tracking-wide text-white/30">dbt · spark · bedrock</span>
-        <span className="font-mono text-[10.5px] tracking-wide text-white/30">
+      <div className="flex items-center justify-between border-t border-border px-4 py-3">
+        <span className="font-mono text-[10.5px] tracking-wide text-text-xsoft">dbt · spark · bedrock</span>
+        <span className="font-mono text-[10.5px] tracking-wide text-text-xsoft">
           uptime <span className="text-brand">99.98%</span>
         </span>
       </div>
