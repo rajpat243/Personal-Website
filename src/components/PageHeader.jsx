@@ -1,12 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-// Compact hero band used at the top of inner pages. Mirrors the home hero:
-// dark slate base with soft, slowly-drifting blue/cyan glow blobs.
 export default function PageHeader({ eyebrow, title, subtitle }) {
   const reduce = useReducedMotion()
   return (
-    <section className="relative overflow-hidden bg-[#07080A] text-white">
-      {/* Glow blobs echoing the home hero background. */}
+    <section className="relative overflow-hidden bg-bg text-text">
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-brand-light/30 blur-3xl"
@@ -29,8 +26,8 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
           {eyebrow && (
             <p className="mb-3 font-mono text-[12px] font-medium uppercase tracking-[0.2em] text-brand">{eyebrow}</p>
           )}
-          <h1 className="font-display text-4xl font-bold tracking-tight text-[#F4F6F8] sm:text-5xl">{title}</h1>
-          {subtitle && <p className="mt-4 max-w-2xl text-lg text-[#9AA1AD]">{subtitle}</p>}
+          <h1 className="font-display text-4xl font-bold tracking-tight text-text sm:text-5xl">{title}</h1>
+          {subtitle && <p className="mt-4 max-w-2xl text-lg text-text-soft">{subtitle}</p>}
         </motion.div>
       </div>
     </section>
