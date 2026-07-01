@@ -94,9 +94,9 @@ export const experience = [
     location: 'Groton, CT',
     period: 'Jun 2024 – Jan 2025',
     points: [
-      'Developed and tested C++ utilities to validate embedded system functionality, applying structured unit test plans to ensure data accuracy, reliability, and compliance with system requirements.',
-      'Conducted data-driven analysis of test results using Python and SQL, identifying performance gaps and delivering insights that improved system stability prior to integration.',
-      'Collaborated in an Agile environment using Git, JIRA, and Confluence for version control and reproducible test documentation.',
+      'Developed and tested C++ code to validate the functionality of the control panel on Columbia-class submarines, applying structured unit test plans to ensure reliability and compliance with system requirements.',
+      'Wrote C++ code to configure specific controls within the Columbia-class control panel, ensuring accurate control behavior and compliance with embedded system requirements.',
+      'Built a Python-based automated test harness that ingested and validated embedded firmware output against requirement datasets, cutting regression test time from 4 hours to 30 minutes.',
     ],
   },
   {
